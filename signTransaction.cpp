@@ -2,7 +2,7 @@
 
 extern "C"
 {
-	int DLL_EXPORT foobar()
+	int DLL_EXPORT SignTransaction()
 	{
 		return 32;
 	}
