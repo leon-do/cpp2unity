@@ -1,11 +1,15 @@
 # C++ to .dll
 
-## Compile
+## Windows
 
-`g++ -m64 -fpic -shared signTransaction.cpp -o signTransaction.dll`
+`g++ *.cpp -O3 -fPIC -shared -o sendTransaction.dll`
+
+## OSX
+
+`clang *.cpp -O3 -dynamiclib -arch x86_64 -o sendTransaction.bundle`
 
 ## Notes
 
 https://www.youtube.com/watch?v=qljLhXfVt78
 
-https://atomheartother.github.io/c++/2018/07/12/CPPDynLib.html
+https://forum.unity.com/threads/unity-dllnotfoundexception-when-adding-so-plugins.379721/
