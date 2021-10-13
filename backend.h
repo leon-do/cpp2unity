@@ -1,14 +1,14 @@
 #ifdef _WIN32
 # ifdef WIN_EXPORT
-#   define EXPORTED  __declspec( dllexport )
+#   define DLL_EXPORT  __declspec( dllexport )
 # else
-#   define EXPORTED  __declspec( dllimport )
+#   define DLL_EXPORT  __declspec( dllimport )
 # endif
 #else
-# define EXPORTED
+# define DLL_EXPORT
 #endif
 
 extern "C"
 {
-	int EXPORTED foobar();
+	int DLL_EXPORT foobar();
 }
