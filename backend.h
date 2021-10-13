@@ -1,9 +1,14 @@
-#ifndef BACKEND_H
-#define BACKEND_H
-#define DLL_EXPORT __declspec(dllexport)
+#ifdef _WIN32
+# ifdef WIN_EXPORT
+#   define EXPORTED  __declspec( dllexport )
+# else
+#   define EXPORTED  __declspec( dllimport )
+# endif
+#else
+# define EXPORTED
 #endif
 
 extern "C"
 {
-	int DLL_EXPORT foobar();
+	int EXPORTED foobar();
 }

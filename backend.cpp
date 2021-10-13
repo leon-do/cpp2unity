@@ -2,7 +2,7 @@
 
 extern "C"
 {
-	int DLL_EXPORT foobar()
+	int EXPORTED foobar()
 	{
 		return 32;
 	}
